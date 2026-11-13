@@ -166,6 +166,32 @@ a:focus-visible {
   padding: 2.8rem 0 4rem;
 }
 
+.hero-portrait {
+  display: flex;
+  justify-content: center;
+}
+
+.portrait-placeholder {
+  display: grid;
+  width: min(100%, 300px);
+  aspect-ratio: 1;
+  margin: 0 auto;
+  place-items: center;
+  border: 5px solid var(--mint);
+  border-radius: 50%;
+  outline: 1px solid var(--line);
+  outline-offset: 5px;
+  color: var(--muted);
+  background: #edf2eb;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+img.portrait-placeholder {
+  display: block;
+  object-fit: cover;
+}
+
 .eyebrow {
   margin: 0 0 0.8rem;
   color: var(--green);
@@ -214,6 +240,11 @@ p {
   color: var(--muted);
   font-size: 1.08rem;
   line-height: 1.8;
+}
+
+.hero-intro-followup {
+  display: block;
+  margin-top: 0.6rem;
 }
 
 .hero-actions {
@@ -377,6 +408,15 @@ p {
 .social-row a:hover {
   text-decoration: underline;
   text-underline-offset: 4px;
+}
+
+.social-row .contact-email {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.contact-sentence {
+  flex-basis: 100%;
 }
 
 .section-heading {
