@@ -141,7 +141,6 @@ if (!page || !detail) {
 } else {
   document.title = `${detail.title} | Emily Ing`;
   document.querySelector('meta[name="description"]').content = detail.summary;
-  document.querySelector("[data-detail-category]").textContent = detail.category;
   document.querySelector("[data-detail-title]").textContent = detail.title;
   document.querySelector("[data-detail-organization]").textContent = detail.organization;
   document.querySelector("[data-detail-date]").textContent = detail.date;
