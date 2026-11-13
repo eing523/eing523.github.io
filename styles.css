@@ -217,8 +217,7 @@ p {
   line-height: 1.8;
 }
 
-.hero-actions,
-.resume-actions {
+.hero-actions {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -347,7 +346,6 @@ p {
 }
 
 .info-card h2,
-.resume-card h2,
 .contact-card h2 {
   margin-bottom: 0.75rem;
   font-size: 1.28rem;
@@ -355,8 +353,7 @@ p {
   line-height: 1.3;
 }
 
-.info-card p:last-child,
-.resume-card > p:not(.eyebrow) {
+.info-card p:last-child {
   margin-bottom: 0;
   color: var(--muted);
   font-size: 0.91rem;
@@ -549,52 +546,37 @@ img.media-placeholder {
   font-size: 0.69rem;
 }
 
-.resume-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  max-width: 520px;
-  gap: 1rem;
+#panel-resume .section-heading {
+  margin-bottom: 3.8rem;
 }
 
-.resume-card {
-  position: relative;
-  overflow: hidden;
-  padding: 1.7rem;
-  border: 1px solid var(--line);
-  border-radius: 15px;
-  background: var(--surface);
+#panel-resume .section-heading h1 {
+  font-size: clamp(2.6rem, 5vw, 3rem);
 }
 
-.resume-icon {
-  display: grid;
-  width: 44px;
-  height: 44px;
-  margin-bottom: 1.5rem;
-  place-items: center;
-  border-radius: 12px;
-  color: var(--green);
-  background: var(--mint);
-  font-size: 0.83rem;
-  font-weight: 750;
+#panel-resume .section-heading > p:last-child {
+  font-size: 1.15rem;
 }
 
-.resume-card h2 {
-  margin-bottom: 0.55rem;
+.resume-download-link {
+  color: #a64c32;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
 }
 
-.resume-card .resume-actions {
-  margin-top: 1.4rem;
-  gap: 0.9rem 1.1rem;
+.resume-viewer-wrap {
+  width: min(1540px, calc(100vw - 120px));
+  margin-left: 50%;
+  transform: translateX(-50%);
 }
 
-.resume-actions .button {
-  min-height: 42px;
-  padding: 0.6rem 0.9rem;
-  font-size: 0.83rem;
-}
-
-.resume-actions .text-link {
-  font-size: 0.83rem;
+.resume-viewer {
+  display: block;
+  width: 100%;
+  height: clamp(620px, 85vh, 1050px);
+  border: 0;
+  border-radius: 10px;
+  background: #3c3c3c;
 }
 
 .contact-card {
@@ -729,8 +711,7 @@ img.media-placeholder {
   }
 
   .about-grid,
-  .project-grid,
-  .resume-grid {
+  .project-grid {
     grid-template-columns: 1fr;
   }
 
@@ -749,6 +730,10 @@ img.media-placeholder {
 
   .site-footer {
     padding: 1rem 0;
+  }
+
+  .resume-viewer-wrap {
+    width: calc(100vw - 32px);
   }
 }
 
