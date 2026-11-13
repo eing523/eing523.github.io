@@ -8,10 +8,8 @@ const details = {
     summary:
       "Designing a fixture concept to make continuous glucose monitor sensor plate electroplating more efficient and ergonomic.",
     highlights: [
-      "Design and prototype a clamping mechanism in SolidWorks to secure sensor plates in electroplating fixtures.",
-      "Address the repeated torquing motions required for 192 parts per lot, with the goal of reducing cycle time and improving ergonomics.",
-      "Collaborate with MiniMed engineers and a student team through weekly design reviews.",
-      "Incorporate manufacturing and quality feedback to align the fixture with production requirements.",
+      "Design and prototype a clamping mechanism in SolidWorks to secure continuous glucose monitor sensor plates to electroplating fixtures, cutting cycle time for 192 torquing motions per lot and improving ergonomics",
+      "Collaborate with MiniMed engineers and a student team through weekly design reviews, incorporating manufacturing and quality feedback to align the fixture with production requirements",
     ],
     technologies: ["SolidWorks", "Mechanical design", "Prototyping"],
   },
@@ -24,9 +22,9 @@ const details = {
     summary:
       "Supported landfill permit oversight by automating regulatory reporting and building interactive mapping tools.",
     highlights: [
-      "Automated regulatory reporting for more than 400 permitted facilities with R scripts, replacing a manual staff workflow.",
-      "Built an ArcGIS Pro map and Experience Builder dashboard with dynamic search, charts, and distance filtering.",
-      "Inspected landfills for permit compliance and communicated observed leachate collection deficiencies to dischargers.",
+      "Automated regulatory reporting for 400+ permitted facilities with R scripts, replacing a manual staff workflow",
+      "Built an ArcGIS Pro map and Experience Builder dashboard with dynamic search, charts, and distance filtering",
+      "Inspected landfills for permit compliance, flagging leachate collection deficiencies and communicating findings to dischargers",
     ],
     technologies: ["R", "ArcGIS Pro", "Experience Builder"],
   },
@@ -39,9 +37,9 @@ const details = {
     summary:
       "Developing printhead and UV-curing hardware for precise bioink dispensing and PEG-acrylate hydrogel tissue models.",
     highlights: [
-      "Design and prototype a multichannel printhead in SolidWorks for precise, consistent bioink dispensing.",
-      "Engineer a UV print bed with an 8–10 mW/cm² output to photopolymerize PEG-acrylate hydrogels.",
-      "Design an acrylic UV enclosure to protect users and remove environmental variables from the curing process.",
+      "Design and prototype a multichannel printhead in SolidWorks for precise, consistent bioink dispensing",
+      "Engineer a UV print bed (8–10 mW/cm²) to photopolymerize PEG-acrylate hydrogels for tissue models",
+      "Design acrylic UV enclosure to protect users and remove environmental variables from the curing process",
     ],
     technologies: ["SolidWorks", "UV curing", "Bioprinting"],
   },
@@ -54,9 +52,8 @@ const details = {
     summary:
       "Help students build confidence with SolidWorks, CAD, finite element analysis, and engineering simulation.",
     highlights: [
-      "Lead weekly SolidWorks office hours in support of course team projects.",
-      "Teach CAD, FEA, and simulation concepts through hands-on guidance.",
-      "Grade SolidWorks lab assignments and provide feedback to reinforce CAD proficiency.",
+      "Lead weekly SolidWorks office hours, teaching CAD, FEA, and simulation to support the course's team projects",
+      "Grade SolidWorks lab assignments and give feedback to reinforce CAD proficiency across the course",
     ],
     technologies: ["SolidWorks", "CAD", "FEA", "Simulation"],
   },
