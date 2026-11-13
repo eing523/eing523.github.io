@@ -12,7 +12,7 @@ The repository includes a GitHub Actions workflow that publishes the site on eve
 
 For the first deployment, open **Settings → Pages** and choose **GitHub Actions** as the build and deployment source. The workflow cannot enable Pages automatically if GitHub restricts the repository token. Then re-run the failed **Deploy portfolio to GitHub Pages** workflow in **Actions** or push another commit to `main`.
 
-For the `eing523/portfolio` repository, the URL is `https://eing523.github.io/portfolio/`.
+For the `eing523/eing523.github.io` repository, the URL is `https://eing523.github.io/`.
 
 ## Project and experience pages
 
