@@ -142,8 +142,6 @@ const details = {
   },
 };
 
-document.getElementById("year").textContent = new Date().getFullYear();
-
 const page = document.querySelector("[data-detail-id]");
 const detail = details[page?.dataset.detailId];
 

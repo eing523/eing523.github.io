@@ -8,6 +8,7 @@
     <title>Emily Ing | Engineering Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
+    <script src="footer.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -181,8 +182,17 @@
     </main>
 
     <footer class="site-footer">
-      <span>© <span id="year">2026</span> Emily Ing</span>
-      <span>Designed with curiosity in Claremont, CA</span>
+      <div class="footer-meta">
+        <span>Based in Claremont, CA and New York, NY</span>
+        <span aria-hidden="true">·</span>
+        <span>Updated September 2026</span>
+      </div>
+      <div class="footer-time">
+        <span class="footer-time-dot" aria-hidden="true"></span>
+        <span>Pacific time</span>
+        <span aria-hidden="true">·</span>
+        <time id="pacific-time" aria-label="Current time in the Pacific time zone"></time>
+      </div>
     </footer>
   </body>
 </html>

@@ -68,5 +68,3 @@ function syncTabToHash() {
 
 window.addEventListener("popstate", syncTabToHash);
 window.addEventListener("hashchange", syncTabToHash);
-
-document.getElementById("year").textContent = new Date().getFullYear();
