@@ -135,7 +135,6 @@ a:focus-visible {
 
 .page-shell {
   width: min(1000px, calc(100% - 48px));
-  min-height: calc(100vh - 160px);
   margin: 0 auto;
 }
 
