@@ -55,6 +55,10 @@
   line-height: 1.8;
 }
 
+.detail-image-placeholder {
+  margin-bottom: 2rem;
+}
+
 .detail-tags {
   margin-bottom: 2.4rem;
 }
