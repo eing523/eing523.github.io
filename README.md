@@ -8,11 +8,9 @@ Open `index.html` in a browser. The resume PDFs are in `assets/`.
 
 ## Publish with GitHub Pages
 
-The repository includes a GitHub Actions workflow that enables GitHub Pages and publishes the site on every push to `main`.
+The repository includes a GitHub Actions workflow that publishes the site on every push to `main`.
 
-Push this project to the `main` branch of a public GitHub repository, then wait for the **Deploy portfolio to GitHub Pages** workflow to complete. GitHub will show the public URL in **Settings → Pages** and in the workflow deployment.
-
-If automatic setup is blocked, open **Settings → Pages** and choose **GitHub Actions** as the build and deployment source.
+For the first deployment, open **Settings → Pages** and choose **GitHub Actions** as the build and deployment source. The workflow cannot enable Pages automatically if GitHub restricts the repository token. Then re-run the failed **Deploy portfolio to GitHub Pages** workflow in **Actions** or push another commit to `main`.
 
 For the `eing523/portfolio` repository, the URL is `https://eing523.github.io/portfolio/`.
 
