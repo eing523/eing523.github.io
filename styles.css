@@ -61,9 +61,6 @@ a:focus-visible {
 }
 
 .site-header {
-  position: sticky;
-  z-index: 2;
-  top: 0;
   display: flex;
   width: min(1120px, calc(100% - 48px));
   min-height: 88px;
@@ -248,10 +245,9 @@ p {
 }
 
 .hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 1rem 1.4rem;
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 0.96rem;
 }
 
 .button {
