@@ -565,15 +565,17 @@ img.media-placeholder {
 }
 
 .resume-viewer-wrap {
-  width: min(1540px, calc(100vw - 120px));
-  margin-left: 50%;
+  position: relative;
+  left: 50%;
+  width: min(1600px, calc(100vw - 64px));
+  margin: 0;
   transform: translateX(-50%);
 }
 
 .resume-viewer {
   display: block;
   width: 100%;
-  height: clamp(620px, 85vh, 1050px);
+  height: clamp(720px, 90vh, 1200px);
   border: 0;
   border-radius: 10px;
   background: #3c3c3c;
@@ -733,7 +735,7 @@ img.media-placeholder {
   }
 
   .resume-viewer-wrap {
-    width: calc(100vw - 32px);
+    width: calc(100vw - 24px);
   }
 }
 
