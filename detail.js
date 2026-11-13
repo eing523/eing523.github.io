@@ -11,7 +11,6 @@ const details = {
       "Design and prototype a clamping mechanism in SolidWorks to secure continuous glucose monitor sensor plates to electroplating fixtures, cutting cycle time for 192 torquing motions per lot and improving ergonomics",
       "Collaborate with MiniMed engineers and a student team through weekly design reviews, incorporating manufacturing and quality feedback to align the fixture with production requirements",
     ],
-    technologies: ["SolidWorks", "Mechanical design", "Prototyping"],
   },
   "water-resources-internship": {
     category: "Engineering experience",
@@ -26,7 +25,6 @@ const details = {
       "Built an ArcGIS Pro map and Experience Builder dashboard with dynamic search, charts, and distance filtering",
       "Inspected landfills for permit compliance, flagging leachate collection deficiencies and communicating findings to dischargers",
     ],
-    technologies: ["R", "ArcGIS Pro", "Experience Builder"],
   },
   "bioprinting-research": {
     category: "Engineering experience",
@@ -41,7 +39,6 @@ const details = {
       "Engineer a UV print bed (8–10 mW/cm²) to photopolymerize PEG-acrylate hydrogels for tissue models",
       "Design acrylic UV enclosure to protect users and remove environmental variables from the curing process",
     ],
-    technologies: ["SolidWorks", "UV curing", "Bioprinting"],
   },
   "cad-tutor": {
     category: "Engineering experience",
@@ -55,7 +52,6 @@ const details = {
       "Lead weekly SolidWorks office hours, teaching CAD, FEA, and simulation to support the course's team projects",
       "Grade SolidWorks lab assignments and give feedback to reinforce CAD proficiency across the course",
     ],
-    technologies: ["SolidWorks", "CAD", "FEA", "Simulation"],
   },
   "fpga-display-keypad": {
     category: "Engineering project",
@@ -69,7 +65,6 @@ const details = {
       "Allowed each displayed digit to be controlled with DIP switches.",
       "Built a counter-based scanner to drive keypad rows, read columns, and light an LED on each keypress.",
     ],
-    technologies: ["SystemVerilog", "Lattice iCE40 UltraPlus"],
   },
   "fpga-keypad-scanner": {
     category: "Engineering project",
@@ -83,7 +78,6 @@ const details = {
       "Handled switch bounce so each press registers once regardless of how long the key is held.",
       "Ignored additional keypresses while a key was held.",
     ],
-    technologies: ["SystemVerilog", "Lattice iCE40 UltraPlus"],
   },
   "stm32-digital-audio": {
     category: "Engineering project",
@@ -97,7 +91,6 @@ const details = {
       "Derived prescaler and auto-reload values for the minimum and maximum note frequencies.",
       "Played tunes through an LM386 amplifier, with each note within 1% of its target pitch.",
     ],
-    technologies: ["C", "STM32L432KC", "SEGGER", "Timers", "LM386"],
   },
   "stm32-motor-encoder": {
     category: "Engineering project",
@@ -110,7 +103,6 @@ const details = {
       "Read the two channels of a quadrature encoder using interrupts on both sensors.",
       "Used encoder transitions to measure motor speed and determine rotation direction.",
     ],
-    technologies: ["C", "STM32L432KC", "Quadrature encoder", "Interrupts"],
   },
   "autonomous-surface-vehicle": {
     category: "Engineering project",
@@ -124,7 +116,6 @@ const details = {
       "Designed and waterproofed analog signal-conditioning circuits for pressure, turbidity, and temperature sensors.",
       "Integrated environmental sensors to support measurements at multiple depths.",
     ],
-    technologies: ["Analog circuit design", "Sensor integration", "Waterproofing"],
   },
   "autonomous-underwater-robot": {
     category: "Engineering project",
@@ -138,7 +129,6 @@ const details = {
       "Validated signal integrity on an oscilloscope.",
       "Programmed a LabVIEW proportional controller for autonomous depth tracking and step-response analysis.",
     ],
-    technologies: ["LabVIEW", "PCB design", "Control systems", "Oscilloscope"],
   },
 };
 
@@ -173,12 +163,5 @@ if (!page || !detail) {
     const item = document.createElement("li");
     item.textContent = text;
     highlights.append(item);
-  }
-
-  const tags = document.querySelector("[data-detail-tags]");
-  for (const text of detail.technologies) {
-    const item = document.createElement("span");
-    item.textContent = text;
-    tags.append(item);
   }
 }

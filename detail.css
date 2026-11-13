@@ -59,14 +59,6 @@
   margin-bottom: 2rem;
 }
 
-.detail-tags {
-  margin-bottom: 2.4rem;
-}
-
-.detail-tags:empty {
-  display: none;
-}
-
 .detail-panel h2 {
   margin-bottom: 0.8rem;
   font-size: 1.22rem;
