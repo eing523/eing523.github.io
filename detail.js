@@ -56,8 +56,8 @@ const details = {
   "fpga-display-keypad": {
     category: "Engineering project",
     title: "FPGA Dual 7-Segment Display & Keypad",
-    organization: "Independent coursework project",
-    date: "Sep 2026",
+    date: "Sep 2026 — Sep 2026",
+    writeupUrl: "https://eing523.github.io/e155-portfolio/labs/lab2/lab2.html",
     summary:
       "Built a modular FPGA design that combines a multiplexed dual hexadecimal display with a scanned keypad and LED feedback.",
     highlights: [
@@ -69,8 +69,8 @@ const details = {
   "fpga-keypad-scanner": {
     category: "Engineering project",
     title: "FPGA Keypad Scanner",
-    organization: "Independent coursework project",
-    date: "Sep 2026",
+    date: "Sep 2026 — Sep 2026",
+    writeupUrl: "https://eing523.github.io/e155-portfolio/labs/lab3/lab3.html",
     summary:
       "Created a debounced 4×4 keypad scanner that displays the last two hexadecimal keypresses.",
     highlights: [
@@ -82,8 +82,8 @@ const details = {
   "stm32-digital-audio": {
     category: "Engineering project",
     title: "STM32 Digital Audio",
-    organization: "Independent coursework project",
-    date: "Sep 2026",
+    date: "Sep 2026 — Sep 2026",
+    writeupUrl: "https://eing523.github.io/e155-portfolio/labs/lab4/lab4.html",
     summary:
       "Used STM32 timer drivers to generate notes and play tunes through an LM386 audio amplifier.",
     highlights: [
@@ -95,8 +95,8 @@ const details = {
   "stm32-motor-encoder": {
     category: "Engineering project",
     title: "STM32 Motor Speed & Direction",
-    organization: "Independent coursework project",
-    date: "Oct 2026",
+    date: "Oct 2026 — Oct 2026",
+    writeupUrl: "https://eing523.github.io/e155-portfolio/labs/lab5/lab5.html",
     summary:
       "Measured a motor's speed and direction from its quadrature encoder using STM32 interrupts.",
     highlights: [
@@ -107,7 +107,6 @@ const details = {
   "autonomous-surface-vehicle": {
     category: "Engineering project",
     title: "Autonomous Surface Vehicle",
-    organization: "Engineering team project",
     date: "Mar 2026 — Apr 2026",
     summary:
       "Built and deployed a low-cost surface vehicle for measuring ocean pollution at depths of 0–2 meters.",
@@ -120,7 +119,6 @@ const details = {
   "autonomous-underwater-robot": {
     category: "Engineering project",
     title: "Autonomous Underwater Robot",
-    organization: "Engineering team project",
     date: "Aug 2025 — Nov 2025",
     summary:
       "Integrated depth-sensing electronics and a proportional control system for autonomous underwater depth tracking.",
@@ -128,6 +126,14 @@ const details = {
       "Soldered PCB circuitry to integrate a pressure sensor and thermistor.",
       "Validated signal integrity on an oscilloscope.",
       "Programmed a LabVIEW proportional controller for autonomous depth tracking and step-response analysis.",
+    ],
+  },
+  "hammer": {
+    category: "Engineering project",
+    title: "Custom Hammer",
+    summary: "Designed and built a custom hammer.",
+    highlights: [
+      "Designed and built a custom hammer with a wooden handle and metal head.",
     ],
   },
 };
@@ -141,9 +147,20 @@ if (!page || !detail) {
 } else {
   document.title = `${detail.title} | Emily Ing`;
   document.querySelector('meta[name="description"]').content = detail.summary;
+  page.classList.toggle("project-detail", detail.category === "Engineering project");
   document.querySelector("[data-detail-title]").textContent = detail.title;
-  document.querySelector("[data-detail-organization]").textContent = detail.organization;
-  document.querySelector("[data-detail-date]").textContent = detail.date;
+  const organization = document.querySelector("[data-detail-organization]");
+  if (detail.organization) {
+    organization.textContent = detail.organization;
+  } else {
+    organization.remove();
+  }
+  const date = document.querySelector("[data-detail-date]");
+  if (detail.date) {
+    date.textContent = detail.date;
+  } else {
+    date.remove();
+  }
   document.querySelector("[data-detail-summary]").textContent = detail.summary;
 
   const location = document.querySelector("[data-detail-location]");
@@ -162,5 +179,16 @@ if (!page || !detail) {
     const item = document.createElement("li");
     item.textContent = text;
     highlights.append(item);
+  }
+
+  if (detail.writeupUrl) {
+    const writeup = document.createElement("p");
+    writeup.className = "detail-writeup";
+    writeup.textContent = "Writeup: ";
+    const link = document.createElement("a");
+    link.href = detail.writeupUrl;
+    link.textContent = "View lab writeup";
+    writeup.append(link);
+    highlights.parentElement.after(writeup);
   }
 }

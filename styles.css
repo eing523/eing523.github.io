@@ -478,6 +478,12 @@ img.media-placeholder {
   object-fit: cover;
 }
 
+.project-card img.media-placeholder {
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  border: 1px solid var(--line);
+}
+
 .project-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -551,7 +557,7 @@ img.media-placeholder {
 }
 
 .resume-download-link {
-  color: #a64c32;
+  color: var(--green);
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
 }
@@ -622,7 +628,7 @@ img.media-placeholder {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #a64c32;
+  background: var(--green);
 }
 
 @media (max-width: 700px) {

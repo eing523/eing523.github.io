@@ -43,7 +43,6 @@
         </div>
 
         <div class="social-row">
-          <span>Find me online</span>
           <a href="https://www.linkedin.com/in/emilying523" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
           <a href="https://github.com/eing523" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
           <span class="contact-sentence">You can reach me at <a class="contact-email" href="mailto:eing@g.hmc.edu">eing@g.hmc.edu</a>.</span>
@@ -108,46 +107,51 @@
       <section id="panel-projects" class="content-panel" role="tabpanel" aria-labelledby="tab-projects" tabindex="0">
         <div class="section-heading">
           <h1>Projects</h1>
-          <p>A mix of embedded systems, mechanical, and electrical engineering projects.</p>
+          <p>A mix of mechanical, electrical, and embedded engineering projects.</p>
         </div>
 
-        <!-- Replace each placeholder with an img, e.g. <img class="media-placeholder" src="assets/images/project-name.jpg" alt="Description">. -->
         <div class="project-grid">
           <a class="project-card" href="projects/fpga-display-keypad.html">
-            <div class="media-placeholder" role="img" aria-label="Image placeholder for FPGA Dual 7-Segment Display and Keypad">Add project image here</div>
-            <div class="project-topline"><span class="project-number">01</span><span class="project-date">Sep 2026</span></div>
+            <img class="media-placeholder" src="assets/images/7seg_single.jpeg" alt="Seven-segment display circuit on a development board" loading="lazy">
+            <div class="project-topline"><span class="project-number">01</span><span class="project-date">Sep — Sep 2026</span></div>
             <h2>FPGA Dual 7-Segment Display &amp; Keypad</h2>
             <p>Designed a modular SystemVerilog display with a shared seven-segment decoder, DIP-switch digit control, and a counter-based keypad scanner that lights an LED on each keypress.</p>
           </a>
           <a class="project-card" href="projects/fpga-keypad-scanner.html">
-            <div class="media-placeholder" role="img" aria-label="Image placeholder for FPGA Keypad Scanner">Add project image here</div>
-            <div class="project-topline"><span class="project-number">02</span><span class="project-date">Sep 2026</span></div>
+            <img class="media-placeholder" src="assets/images/keypad.jpeg" alt="FPGA keypad scanner circuit with keypad and two-digit display" loading="lazy">
+            <div class="project-topline"><span class="project-number">02</span><span class="project-date">Sep —Sep 2026</span></div>
             <h2>FPGA Keypad Scanner</h2>
             <p>Built a 4×4 keypad scanner that displays the last two hexadecimal digits pressed. Added debounce behavior so a held key registers once and additional presses are ignored until release.</p>
           </a>
           <a class="project-card" href="projects/stm32-digital-audio.html">
-            <div class="media-placeholder" role="img" aria-label="Image placeholder for STM32 Digital Audio">Add project image here</div>
-            <div class="project-topline"><span class="project-number">03</span><span class="project-date">Sep 2026</span></div>
+            <img class="media-placeholder" src="assets/images/digital_audio_preview.jpg" alt="STM32 digital audio circuit with speaker" loading="lazy">
+            <div class="project-topline"><span class="project-number">03</span><span class="project-date">Sep — Sep 2026</span></div>
             <h2>STM32 Digital Audio</h2>
             <p>Wrote TIM6/TIM7 drivers for note frequency and duration, then calculated timer settings to play tunes through an LM386 amplifier with notes within 1% of target pitch.</p>
           </a>
           <a class="project-card" href="projects/stm32-motor-encoder.html">
-            <div class="media-placeholder" role="img" aria-label="Image placeholder for STM32 Motor Speed and Direction">Add project image here</div>
-            <div class="project-topline"><span class="project-number">04</span><span class="project-date">Oct 2026</span></div>
+            <img class="media-placeholder" src="assets/images/motor_preview.jpg" alt="Motor and encoder connected to a development board" loading="lazy">
+            <div class="project-topline"><span class="project-number">04</span><span class="project-date">Oct —Oct 2026</span></div>
             <h2>STM32 Motor Speed &amp; Direction</h2>
             <p>Measured motor speed and direction from a quadrature encoder using interrupts on both sensor channels.</p>
           </a>
           <a class="project-card" href="projects/autonomous-surface-vehicle.html">
-            <div class="media-placeholder" role="img" aria-label="Image placeholder for Autonomous Surface Vehicle">Add project image here</div>
+            <img class="media-placeholder" src="assets/images/asv.jpeg" alt="Autonomous surface vehicle floating on the water" loading="lazy">
             <div class="project-topline"><span class="project-number">05</span><span class="project-date">Mar — Apr 2026</span></div>
             <h2>Autonomous Surface Vehicle</h2>
             <p>Built and deployed a surface vehicle to measure ocean pollution at depths of 0–2 m on a $50 budget. Designed and waterproofed analog signal-conditioning circuits for pressure, turbidity, and temperature sensors.</p>
           </a>
           <a class="project-card" href="projects/autonomous-underwater-robot.html">
-            <div class="media-placeholder" role="img" aria-label="Image placeholder for Autonomous Underwater Robot">Add project image here</div>
+            <img class="media-placeholder" src="assets/images/temperature_sensor.jpeg" alt="Temperature sensor circuit connected to a development board" loading="lazy">
             <div class="project-topline"><span class="project-number">06</span><span class="project-date">Aug — Nov 2025</span></div>
             <h2>Autonomous Underwater Robot</h2>
             <p>Integrated a pressure sensor and thermistor on a PCB, validated signal integrity with an oscilloscope, and programmed a LabVIEW proportional controller for depth tracking and step-response analysis.</p>
+          </a>
+          <a class="project-card" href="projects/hammer.html">
+            <img class="media-placeholder" src="assets/images/hammer.jpeg" alt="Custom hammer on a wooden display stand" loading="lazy">
+            <div class="project-topline"><span class="project-number">07</span></div>
+            <h2>Custom Hammer</h2>
+            <p>Designed and built a custom hammer.</p>
           </a>
         </div>
       </section>

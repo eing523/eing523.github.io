@@ -41,6 +41,10 @@
   font-size: 0.88rem;
 }
 
+.project-detail .detail-meta [data-detail-date] {
+  margin-left: auto;
+}
+
 .detail-meta span + span::before {
   margin-right: 1rem;
   color: #a8b2ac;
@@ -55,8 +59,17 @@
   line-height: 1.8;
 }
 
-.detail-image-placeholder {
+.detail-panel .detail-image-placeholder {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: min(640px, 70vh);
+  aspect-ratio: auto;
   margin-bottom: 2rem;
+  border: 0;
+  background: transparent;
+  object-fit: contain;
+  object-position: center;
 }
 
 .detail-panel h2 {
@@ -78,6 +91,17 @@
 
 .detail-highlights li::marker {
   color: var(--green);
+}
+
+.detail-writeup {
+  margin: 1.5rem 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+
+.detail-writeup a {
+  color: var(--green);
+  font-weight: 650;
 }
 
 .detail-contact {
