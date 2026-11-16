@@ -195,6 +195,7 @@ if (!page || !detail) {
     const pauseLabel = playLabel.replace("Play", "Pause");
     const seek = item.querySelector(".detail-video-seek");
     const timeLabel = item.querySelector(".detail-video-time");
+    const audioEnabled = item.dataset.audioEnabled === "true";
 
     const updateTime = () => {
       seek.value = String(video.currentTime);
@@ -210,15 +211,20 @@ if (!page || !detail) {
       updateTime();
     };
 
-    video.volume = 0;
-    video.muted = true;
+    if (audioEnabled) {
+      video.volume = 1;
+      video.muted = false;
+    } else {
+      video.volume = 0;
+      video.muted = true;
+      video.addEventListener("volumechange", () => {
+        video.volume = 0;
+        video.muted = true;
+      });
+    }
     video.addEventListener("loadedmetadata", updateDuration);
     video.addEventListener("durationchange", updateDuration);
     video.addEventListener("timeupdate", updateTime);
-    video.addEventListener("volumechange", () => {
-      video.volume = 0;
-      video.muted = true;
-    });
     video.addEventListener("play", () => {
       button.setAttribute("aria-label", pauseLabel);
       label.textContent = pauseLabel;
