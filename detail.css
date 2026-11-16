@@ -83,6 +83,10 @@ body[data-detail-id="fpga-display-keypad"] .detail-panel {
   margin-bottom: 2rem;
 }
 
+.detail-video-item {
+  min-width: 0;
+}
+
 .detail-video-button {
   position: relative;
   overflow: hidden;
@@ -107,6 +111,38 @@ body[data-detail-id="fpga-display-keypad"] .detail-panel {
   max-height: min(720px, 80vh);
   aspect-ratio: auto;
   object-fit: contain;
+}
+
+.detail-video-controls {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.65rem;
+}
+
+.detail-video-seek {
+  width: 100%;
+  margin: 0;
+  accent-color: var(--green);
+  cursor: pointer;
+}
+
+.detail-video-seek:disabled {
+  cursor: wait;
+}
+
+.detail-video-seek:focus-visible {
+  outline: 3px solid var(--amber);
+  outline-offset: 3px;
+}
+
+.detail-video-time {
+  min-width: 5.5rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
 }
 
 .detail-video-button span {

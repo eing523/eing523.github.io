@@ -24,6 +24,18 @@
         <div class="detail-meta"><span data-detail-organization></span><span data-detail-date></span><span data-detail-location></span></div>
         <p class="detail-summary" data-detail-summary></p>
         <img class="media-placeholder detail-image-placeholder" src="../assets/images/digital_audio_preview.jpg" alt="STM32 digital audio circuit with speaker">
+        <div class="detail-video-gallery" aria-label="Project videos">
+          <div class="detail-video-item">
+            <button class="detail-video-button" type="button" aria-label="Play digital audio video">
+              <video class="detail-video" src="../assets/images/digital_audio.mp4" muted playsinline preload="metadata"></video>
+              <span>Play digital audio video</span>
+            </button>
+            <div class="detail-video-controls">
+              <input class="detail-video-seek" type="range" min="0" max="0" step="0.1" value="0" disabled aria-label="Seek digital audio video">
+              <span class="detail-video-time">0:00 / 0:00</span>
+            </div>
+          </div>
+        </div>
         <section><h2>Project highlights</h2><ul class="detail-highlights" data-detail-highlights></ul></section>
       </article>
       <p data-detail-error hidden>Sorry, this portfolio page could not be found. <a href="../index.html">Return to the portfolio</a>.</p>

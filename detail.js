@@ -180,14 +180,41 @@ if (!page || !detail) {
     highlights.parentElement.after(writeup);
   }
 
-  for (const button of document.querySelectorAll(".detail-video-button")) {
+  const formatVideoTime = (seconds) => {
+    const wholeSeconds = Math.floor(seconds);
+    const minutes = Math.floor(wholeSeconds / 60);
+    const remainingSeconds = String(wholeSeconds % 60).padStart(2, "0");
+    return `${minutes}:${remainingSeconds}`;
+  };
+
+  for (const item of document.querySelectorAll(".detail-video-item")) {
+    const button = item.querySelector(".detail-video-button");
     const video = button.querySelector("video");
     const label = button.querySelector("span");
     const playLabel = button.getAttribute("aria-label");
     const pauseLabel = playLabel.replace("Play", "Pause");
+    const seek = item.querySelector(".detail-video-seek");
+    const timeLabel = item.querySelector(".detail-video-time");
+
+    const updateTime = () => {
+      seek.value = String(video.currentTime);
+      const currentTime = formatVideoTime(video.currentTime);
+      const duration = formatVideoTime(video.duration);
+      seek.setAttribute("aria-valuetext", `${currentTime} of ${duration}`);
+      timeLabel.textContent = `${currentTime} / ${duration}`;
+    };
+
+    const updateDuration = () => {
+      seek.max = String(video.duration);
+      seek.disabled = false;
+      updateTime();
+    };
 
     video.volume = 0;
     video.muted = true;
+    video.addEventListener("loadedmetadata", updateDuration);
+    video.addEventListener("durationchange", updateDuration);
+    video.addEventListener("timeupdate", updateTime);
     video.addEventListener("volumechange", () => {
       video.volume = 0;
       video.muted = true;
@@ -204,6 +231,10 @@ if (!page || !detail) {
       button.setAttribute("aria-label", playLabel);
       label.textContent = playLabel;
     });
+    seek.addEventListener("input", () => {
+      video.currentTime = Number(seek.value);
+      updateTime();
+    });
     button.addEventListener("click", () => {
       if (video.paused) {
         video.play().catch((error) => {
@@ -214,5 +245,9 @@ if (!page || !detail) {
         video.pause();
       }
     });
+
+    if (video.readyState >= 1) {
+      updateDuration();
+    }
   }
 }
