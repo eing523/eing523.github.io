@@ -108,24 +108,13 @@ const details = {
     category: "Engineering project",
     title: "Autonomous Surface Vehicle",
     date: "Mar 2026 — Apr 2026",
+    writeupUrl: "../assets/e80%20final%20report.pdf",
     summary:
       "Built and deployed a low-cost surface vehicle for measuring ocean pollution at depths of 0–2 meters.",
     highlights: [
       "Built and deployed the vehicle on a $50 budget.",
       "Designed and waterproofed analog signal-conditioning circuits for pressure, turbidity, and temperature sensors.",
       "Integrated environmental sensors to support measurements at multiple depths.",
-    ],
-  },
-  "autonomous-underwater-robot": {
-    category: "Engineering project",
-    title: "Autonomous Underwater Robot",
-    date: "Aug 2025 — Nov 2025",
-    summary:
-      "Integrated depth-sensing electronics and a proportional control system for autonomous underwater depth tracking.",
-    highlights: [
-      "Soldered PCB circuitry to integrate a pressure sensor and thermistor.",
-      "Validated signal integrity on an oscilloscope.",
-      "Programmed a LabVIEW proportional controller for autonomous depth tracking and step-response analysis.",
     ],
   },
   "hammer": {
@@ -184,11 +173,46 @@ if (!page || !detail) {
   if (detail.writeupUrl) {
     const writeup = document.createElement("p");
     writeup.className = "detail-writeup";
-    writeup.textContent = "Writeup: ";
     const link = document.createElement("a");
     link.href = detail.writeupUrl;
     link.textContent = "View lab writeup";
     writeup.append(link);
     highlights.parentElement.after(writeup);
+  }
+
+  for (const button of document.querySelectorAll(".detail-video-button")) {
+    const video = button.querySelector("video");
+    const label = button.querySelector("span");
+    const playLabel = button.getAttribute("aria-label");
+    const pauseLabel = playLabel.replace("Play", "Pause");
+
+    video.volume = 0;
+    video.muted = true;
+    video.addEventListener("volumechange", () => {
+      video.volume = 0;
+      video.muted = true;
+    });
+    video.addEventListener("play", () => {
+      button.setAttribute("aria-label", pauseLabel);
+      label.textContent = pauseLabel;
+    });
+    video.addEventListener("pause", () => {
+      button.setAttribute("aria-label", playLabel);
+      label.textContent = playLabel;
+    });
+    video.addEventListener("ended", () => {
+      button.setAttribute("aria-label", playLabel);
+      label.textContent = playLabel;
+    });
+    button.addEventListener("click", () => {
+      if (video.paused) {
+        video.play().catch((error) => {
+          console.error(`Unable to play project video: ${video.currentSrc}`, error);
+          label.textContent = "Unable to play video";
+        });
+      } else {
+        video.pause();
+      }
+    });
   }
 }
